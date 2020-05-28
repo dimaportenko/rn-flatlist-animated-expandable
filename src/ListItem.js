@@ -5,11 +5,16 @@
 import React, { useState } from 'react';
 import { Image, Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 
-export const ListItem = ({ item }) => {
+export const ListItem = ({ item, onPress }) => {
   const [expanded, setExpanded] = useState(false);
 
+  const onItemPress = () => {
+    onPress()
+    setExpanded(!expanded)
+  }
+
   return (
-    <TouchableOpacity style={styles.wrap} onPress={() => setExpanded(!expanded)}>
+    <TouchableOpacity style={styles.wrap} onPress={onItemPress}>
       <View style={styles.container}>
         <Image source={{ uri: item.image}} style={styles.image} />
         <View style={styles.textContainer}>
