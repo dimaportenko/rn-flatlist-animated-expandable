@@ -30,7 +30,7 @@ export const ListItem = ({ item, onPress }) => {
 };
 
 const styles = StyleSheet.create({
-  wrap: { borderColor: '#ccc', borderWidth: 1, margin: 5, borderRadius: 5  },
+  wrap: { borderColor: '#ccc', borderWidth: 1, margin: 5, borderRadius: 5, backgroundColor: '#fff'  },
   container: { flexDirection: 'row' },
   image: { width: 50, height: 50, margin: 10 },
   textContainer: { justifyContent: 'space-around' },

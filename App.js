@@ -22,7 +22,7 @@ const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView style={{ flex: 1 }}>
+      <SafeAreaView style={{ flex: 1, backgroundColor: '#f2f2f2' }}>
         <ExpandableCellList />
       </SafeAreaView>
     </>
