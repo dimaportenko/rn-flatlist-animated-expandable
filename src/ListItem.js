@@ -31,11 +31,11 @@ export const ListItem = ({ item, onPress }) => {
 
 const styles = StyleSheet.create({
   wrap: {
-    borderColor: '#ccc', borderWidth: 1, margin: 5, borderRadius: 5, backgroundColor: '#fff',
+    borderColor: '#ccc', borderWidth: 1, marginVertical: 5, marginHorizontal: 10, borderRadius: 5, backgroundColor: '#fff',
     shadowColor: '#000', shadowOffset:  {width: 3,height: 3}, shadowOpacity: 0.2,
   },
   container: { flexDirection: 'row' },
-  image: { width: 50, height: 50, margin: 10 },
+  image: { width: 50, height: 50, margin: 10, borderRadius: 5, },
   textContainer: { justifyContent: 'space-around' },
   details: { margin: 10 },
   text: { opacity: 0.7 },
