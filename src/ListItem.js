@@ -18,22 +18,23 @@ export const ListItem = ({ item, onPress }) => {
       <View style={styles.container}>
         <Image source={{ uri: item.image}} style={styles.image} />
         <View style={styles.textContainer}>
-          <Text>{item.title}</Text>
-          <Text>{item.subtitle}</Text>
+          <Text style={styles.text}>{item.title}</Text>
+          <Text style={styles.text}>{item.subtitle}</Text>
         </View>
       </View>
       {expanded && (
-        <Text style={styles.details}>{item.details}</Text>
+        <Text style={[styles.details, styles.text]}>{item.details}</Text>
       )}
     </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
-  wrap: { borderColor: 'gray', borderWidth: 1, margin: 5, borderRadius: 5  },
+  wrap: { borderColor: '#ccc', borderWidth: 1, margin: 5, borderRadius: 5  },
   container: { flexDirection: 'row' },
   image: { width: 50, height: 50, margin: 10 },
   textContainer: { justifyContent: 'space-around' },
   details: { margin: 10 },
+  text: { opacity: 0.7 },
 });
 
